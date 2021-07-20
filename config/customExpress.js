@@ -1,7 +1,6 @@
 const express = require('express');
 const consign = require('consign');
-const bodyParser = require('bodyParser');
-
+const bodyParser = require('body-parser');
 
 module.exports = () => {
   const app = express();
@@ -12,8 +11,6 @@ module.exports = () => {
   consign()
     .include('controllers')
     .into(app);
-  
-  bodyParser()
-  
+    
   return app;
 }
